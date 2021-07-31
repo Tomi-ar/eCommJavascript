@@ -221,8 +221,8 @@ const clickQuitar = (evento) => {
     const Desc2 = (sinDescuento(enCarrito) - calculadora(enCarrito));
     const Subt2 = calculadora(enCarrito);
 
-    $("#totalDesc").replaceWith(`<span id="totalDesc" class="pull-right">$${Desc2}</span>`);
-    $("#mini-cart-subtotal").replaceWith(`<strong id="mini-cart-subtotal" class="pull-right">-$${Subt2}</strong>`);
+    $("#totalDesc").replaceWith(`<span id="totalDesc" class="pull-right">-$${Desc2}</span>`);
+    $("#mini-cart-subtotal").replaceWith(`<strong id="mini-cart-subtotal" class="pull-right">$${Subt2}</strong>`);
 }
 
 //FUNCION PARA LLAMAR AL BOTON QUE VOY A AGREGAR DESPUES
@@ -283,7 +283,7 @@ $(".Add").click(function(e) {
     const Desc = (sinDescuento(enCarrito) - calculadora(enCarrito));
     const Subt = calculadora(enCarrito);
 
-    $("#totalDesc").replaceWith(`<span id="totalDesc" class="pull-right">$${Desc}</span>`);
+    $("#totalDesc").replaceWith(`<span id="totalDesc" class="pull-right">-$${Desc}</span>`);
     $("#mini-cart-subtotal").replaceWith(`<strong id="mini-cart-subtotal" class="pull-right">$${Subt}</strong>`);
 
     eventoQuitar(`.quitar${prodAgregado.id}`, clickQuitar);
