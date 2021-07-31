@@ -1,0 +1,254 @@
+body {
+    font-family: $font;
+}
+
+h2 {
+    font-size: $font-xl;
+    text-align: center;
+    font-weight: $font-bold;
+}
+
+h3 {
+    font-size: $font-l;
+    text-align: center;
+    font-weight: $font-bold;
+}
+
+h4 {
+    font-size: $font-xl;
+    text-align: center;
+    font-weight: $font-bold;
+}
+
+p {
+    font-size: $font-xs;
+    font-weight: $font-normal;
+    padding: 0.5rem 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.principal {
+    text-align: center;
+    .principal__imgFondoMercado {
+        height: 75vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        background-image: url("../images/Fondo2.jpg");
+    }
+    .principal__titulo {
+        background: $color-titulo;
+        background: $backg-titulo;
+        .principal__titulo--primero {
+            color: $color-titulo;
+            font-size: $font-xxl;
+        }
+        .principal__titulo--segundo {
+            color: white;
+            font-size: $font-xl;
+            text-align: center;
+        }
+    }
+}
+
+.carrito {
+    position: fixed;
+    width: 75px;
+    height: 75px;
+    z-index: 2000;
+    right: 30px;
+    bottom: 30px;
+    background-color: dodgerblue;
+    .carrito-img {
+        width: 90%;
+    }
+    &:hover {
+        transform: scale(1.2);
+        background-color: rgb(99, 166, 233);
+        transition: all all $transicion-gral;
+    }
+}
+
+.clearall {
+    clear: both;
+}
+
+.filtros {
+    display: flex;
+    flex-direction: column;
+    span {
+        text-decoration: underline;
+        font-weight: $font-normal;
+        font-size: $font-m;
+    }
+}
+
+#catalogo {
+    .productos {
+        .producto-box {
+            width: $ancho-ppal/3;
+            float: left;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+#mini-cart {
+    display: none;
+    position: fixed;
+    width: 315px;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    z-index: 2500;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding-bottom: 220px;
+    .mini-cart-titulo {
+        background-color: #eee;
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+        #btCerrar {
+            display: block;
+            float: right;
+            cursor: pointer;
+            transform: rotate(45deg);
+            margin-right: 20px;
+            font-size: 50px;
+            font-weight: 100;
+            color: #ababab;
+        }
+    }
+    #seleccionadas {
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 0 10px;
+        .mini-cart-item {
+            padding-bottom: 0.5rem;
+            padding-top: 0.25rem;
+            border-bottom: 1px black;
+            img {
+                display: inline-block;
+                width: 50px;
+                height: auto;
+                margin-top: 40px;
+            }
+            .inf-produto-carrito {
+                display: inline-block;
+                vertical-align: top;
+                position: relative;
+                padding-left: 15px;
+                width: calc(100% - 65px);
+                .title-mini {
+                    display: inline-block;
+                    width: calc(100% - 80px);
+                    color: #111;
+                    font-size: $font-xs;
+                    // vertical-align: top;
+                    margin-bottom: .3rem;
+                    max-height: 28px;
+                }
+                .tipoCerv {
+                    display: block;
+                    color: #111;
+                    font-size: $font-xxs;
+                }
+                .cantidad-produto {
+                    padding: 5px 0;
+                    clear: both;
+                    font-size: $font-xs;
+                    .cantidad-produto-item {
+                        float: left;
+                    }
+                    .cantidad-produto-precio {
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+    .mini-cart-footer {
+        border-top: 1px solid #dedede;
+        padding-top: 5px;
+        background-color: #FFF;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        .mini-cart-totales {
+            padding: 0 30px;
+            p {
+                text-align: right;
+                #totalDesc {
+                    color: grey;
+                }
+            }
+            .pull-right {
+                color: #000;
+                display: inline-block;
+                font-size: $font-s;
+                font-weight: $font-bold;
+                text-align: right;
+                width: 50%;
+            }
+        }
+        .mini-cart-boton {
+            .btn-finalizar-compra {
+                display: block;
+                width: 100%;
+                font-size: 1rem;
+                background: #f38e0d;
+                color: #fff;
+                border-radius: 0;
+                &:hover {
+                    background-color: #aa6305;
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: $font-xs;
+        font-weight: $font-light;
+    }
+    .logo img {
+        width: $logo-normal*2/3;
+    }
+    .redes img {
+        width: $redes-normal*4/5;
+    }
+}
+
+@media all and (min-width: 576px) {
+    p {
+        font-size: $font-s;
+    }
+    li {
+        list-style-type: none;
+    }
+    #footer {
+        a {
+            font-size: $font-xs;
+        }
+        .logo img {
+            width: $logo-normal;
+        }
+        .redes img {
+            width: $redes-normal;
+        }
+    }
+}

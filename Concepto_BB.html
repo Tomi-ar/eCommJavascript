@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <title>Conocé nuestra oferta</title>
+    <meta name="description" content="Conocé más acerca de nuestra oferta y diferenciales. Entendé más sobre como llevamos las mejores cervezas hasta tu casa de forma simple y rápida">
+    <meta name="keywords" content="CERVEZA, BIRRA, SUSCRIPCIÓN, ENVIO, BOTELLAS, DIFERENCIALES, VALORES">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/Estilos4ta.css" type="text/css">
+</head>
+
+<body>
+    <header id="header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="images/Logo.png" width="120" alt="Logo compañía" loading="lazy">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active font-weight-bold mr-lg-5">
+                        <a class="nav-link" href="Mercado_BB.html">Mercado BB<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item mr-lg-5">
+                        <a class="nav-link disabled" href="Estilos_cerveceros.html">Estilos</a>
+                    </li>
+                    <li class="nav-item mr-lg-5">
+                        <a class="nav-link disabled" href="FAQ.html">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="principal">
+            <div class="overflow-hidden principal__imgFondoMercado"></div>
+            <div class="w-100 principal__titulo text-center">
+                <span class="font-weight-bold principal__titulo--primero">La mejor selección de cervezas del país!</span>
+                <p class="font-weight-bold principal__titulo--segundo">Mirá toda nuestra oferta</p>
+            </div>
+        </section>
+
+        <section id="catalogo">
+            <div class="container">
+                <div class="row">
+                    <h3 class="col text-center my-3">Agrega a tu carrito todos los productos que quieras:</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 filtros">
+                        <span>Filtros:</span>
+                        <div id="Formulario">
+                            <div class="form-group">
+                                <label for="tipoCerveza">Buscá por estilo:</label>
+                                <input type="text" class="form-control" id="tipoCerveza">
+                            </div>
+                            <input class="btn btn-primary filtroTipo" type="submit" id="aplicarFiltros" value="Aplicar">
+
+                        </div>
+                    </div>
+
+                    <div id="productos" class="col-md-9 productos">
+                        <div class="clearall"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container" id="mini-cart">
+                <div class="mini-cart-titulo">
+                    <span>
+                        <strong>MI CARRITO</strong>
+                    </span>
+                    <a title="btCerrar" id="btCerrar">+</a>
+                </div>
+                <div class="mini-cart-cont" id="seleccionadas">
+
+                </div>
+                <div class="mini-cart-footer" style="display: block;">
+                    <div class="mini-cart-totales">
+                        <p style="display: block;">Descuentos:
+                            <span id="totalDesc" class="pull-right"></span>
+                        </p>
+                        <p>Subtotal:
+                            <strong id="mini-cart-subtotal" class="pull-right"></strong>
+                        </p>
+                    </div>
+                    <div class="mini-cart-boton">
+                        <button id="finalizar" class="btn btn-block btn-verde btn-finalizar-compra">FINALIZAR COMPRA</button>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <button id="carrito" type="button" class="btn btn-light carrito rounded-circle">
+            <img src="images/Carrito.svg" alt="carrito" class="rounded-pill border border-dark carrito-img">
+        </button>
+
+    </main>
+
+
+    <footer id="footer" class="container-fluid bg-secondary text-white">
+        <div class="row text-center">
+            <div class="col-12 col-sm-4 my-auto mx-auto">
+                <p class="mb-1">Seguinos en las redes:</p>
+                <div class="d-inline-block d-sm-block d-md-inline-block px-md-2 pb-2 redes">
+                    <a href="https://www.facebook.com"><img src="images/facebook.PNG" alt="Icono de facebook"></a>
+                </div>
+                <div class="d-inline-block d-sm-block d-md-inline-block px-1 px-md-2 pb-2 redes">
+                    <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="Icono de instagram"></a>
+                </div>
+                <div class="d-inline-block d-sm-block d-md-inline-block px-md-2 pb-2 redes">
+                    <a href="https://twitter.com/?lang=es"><img src="images/twitter.PNG" alt="Icono de twitter"></a>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 my-3 my-sm-auto  mx-auto">
+                <ul class="my-auto">
+                    <li><a href="Mercado_BB.html#header">Volver arriba</a></li>
+                    <li><a href="WIP.html">Términos y condiciones</a></li>
+                    <li><a href="WIP.html">Uso de cookies y política de privacidad</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-sm-4 my-auto logo mx-auto">
+                <a class="navbar-brand" href="#">
+                    <img src="images/Logo.png" width="120" alt="Logo compañía" class="rounded-pill border border-white" loading="lazy">
+                </a>
+            </div>
+        </div>
+        <div class="row text-center mt-1 pb-1">
+            <ul class="mx-auto my-auto">
+                <li>Buenas Birras © Copyright 2021 | Todos los derechos reservados | Argentina.</li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx " crossorigin="anonymous "></script>
+    <script src="js/MercadoBB.js"></script>
+</body>
