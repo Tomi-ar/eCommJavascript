@@ -94,6 +94,30 @@ const Productos = [{
     },
 ];
 
+// // OPCION PARA CARGAR LOS PRODUCTOS DESDE UN GETJSON
+// const URLJSON = "/Productos/Productos.json"
+
+// $.getJSON(URLJSON, function(respuesta, estado) {
+//     if (estado === "success") {
+//         let misDatos = respuesta;
+//         for (const dato of misDatos) {
+//             $("#productos").append(
+//                 `<div id="producto-box" class="card producto-box">
+//                 <img src="images/TiposCerveza.jpg" class="card-img-top mx-auto" alt="...">
+//                 <div class="card-body">
+//                     <h5 class="card-title">${dato.nombre}</h5>
+//                     <p class="card-text">Productor: ${dato.productor}</p>
+//                     <p class="card-text">Estilo: ${dato.tipo}</p>
+//                     <p class="card-text">Precio: $${dato.precio}</p>
+//                     <button id="${dato.id}" class="btn btn-primary Add my-3">+ Agregar</button>
+//                 </div>
+//             </div>`
+//             )
+//         }
+//     }
+// });
+
+
 // CARGO LOS PRODUCTOS DESDE LA LISTA DE JAVASCRIPT
 for (const product of Productos) {
     $("#productos").append(
@@ -302,10 +326,22 @@ $("#btCerrar").click(() => {
 
 const guardarLocal = (clave, valor) => { localStorage.setItem(clave, valor) };
 
+
+const urlusuario = "https://jsonplaceholder.typicode.com/users"
 $("#finalizar").click(() => {
     guardarLocal("Carrito1", JSON.stringify(enCarrito));
 
-    alert("Gracias por su compra! En breve nos pondremos en contacto para terminar el pedido");
+    const compra = JSON.parse(localStorage.getItem("Carrito1"));
+    let cantProductos = 0;
+    for (let i = 0; i < compra.length; i++) {
+        cantProductos += compra[i].cantidad;
+    }
 
-    refresh();
+    $.getJSON(urlusuario, function(data) {
+        let numero = Math.floor(Math.random() * 10);
+        alert(`Gracias por tu compra ${data[numero].name}! En breve nos pondremos en contacto a tu mail ${data[numero].email} para terminar el pedido de ${cantProductos} productos.`);
+
+        refresh();
+    });
+
 })
